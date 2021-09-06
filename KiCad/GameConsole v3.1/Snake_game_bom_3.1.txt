@@ -1,0 +1,41 @@
+Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet
+1,"Buzzer, polarized",Buzzer,BZ1,Buzzer 5V,Buzzer_12x9.5RM7.6,1,~
+2,Unpolarized capacitor,C,C1 C2 C5 C6,100nF,C_Rect_L7.0mm_W3.5mm_P2.50mm_P5.00mm,4,~
+3,Unpolarized capacitor,C,C3 C4,22p,C_Disc_D3.0mm_W1.6mm_P2.50mm,2,~
+4,"50V 1A General Purpose Rectifier Diode, DO-41",1N4001,D1,1N4001,D_DO-41_SOD81_P10.16mm_Horizontal,1,http://www.vishay.com/docs/88503/1n4001.pdf
+5,"Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",Screw_Terminal_01x02,J2,+ Power in -,"TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.00&P5.08mm_Horizontal",1,~
+6,DC Barrel Jack with an internal switch,Barrel_Jack_Switch,J1,Barrel_Jack_Switch,BarrelJack_Horizontal,1,~
+7,"Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_02x03_Odd_Even,J3,ICSP,PinHeader_2x03_P2.54mm_Vertical,1,~
+8,"Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_01x06_Male,J4,Serial,PinSocket_1x06_P2.54mm_Horizontal,1,~
+9,"Solder Jumper, 3-pole, open",SolderJumper_3_Open,JP2,Select Vcc,SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels,1,~
+10,"Jumper, normally closed",Jumper,JP1,Serial Vcc,PinHeader_1x02_P2.54mm_Vertical,1,~
+11,,Logo-RvD-Logo,L1,Logo-RvD,RvD Logo inverted small,1,
+12,,Logo-TechDen-Logo,L2,Logo-TechDen,TechDen Logo - inverted,1,
+13,Light emitting diode,LED,LED1 LED2 LED3 LED4 LED5 LED6 LED7 LED8 LED9 LED10 LED11 LED12 LED13 LED14 LED15 LED16 LED17 LED18 LED19 LED20 LED21 LED22 LED23 LED24 LED25 LED26 LED27 LED28 LED29 LED30,LED,LED_D3.0mm,30,~
+14,Resistor,R,R1 R2 R3 R4 R5 R6,100E,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,6,~
+15,Resistor,R,R7,10k,R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,1,~
+16,"Push button switch, generic, separate symbols, four pins",SW_Push_Dual_x2,SW3,Down,SW_PUSH_6mm,1,
+17,"Push button switch, generic, separate symbols, four pins",SW_Push_Dual_x2,SW1,Left,SW_PUSH_6mm,1,
+18,"Push button switch, generic, separate symbols, four pins",SW_Push_Dual_x2,SW5,Reset,SW_PUSH_6mm,1,
+19,"Push button switch, generic, separate symbols, four pins",SW_Push_Dual_x2,SW4,Right,SW_PUSH_6mm,1,
+20,"Switch, single pole double throw",SW_SPDT,SW6,SW_SPDT,switch_MSK-12D19,1,~
+21,"Push button switch, generic, separate symbols, four pins",SW_Push_Dual_x2,SW2,Up,SW_PUSH_6mm,1,
+22,"20MHz, 32kB Flash, 2kB SRAM, 1kB EEPROM, DIP-28",ATmega328-PU,U1,ATmega328-PU,DIP-28_W7.62mm,1,http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20with%20picoPower%20Technology%20Data%20Sheet%2040001984A.pdf
+23,"Positive 100mA 30V Linear Regulator, Fixed Output 5V, TO-92",L78L05_TO92,U2,L78L05 (optional),TO-92_Inline,1,http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf
+24,Two pin crystal,Crystal,Y1,16MHz,Crystal_HC49-4H_Vertical,1,~
+
+
+
+
+
+Component Groups:,24
+Component Count:,62
+Fitted Components:,62
+Number of PCBs:,1
+Total components:,62
+Schematic Version:,3.1
+Schematic Date:,2020-06-02
+PCB Variant:,[u'default']
+BoM Date:,21/09/2020 18:24:04
+Schematic Source:,C:\Users\Roland enof Anita\Dropbox\MyKiCad\MySchematics\Snake_game\v3.1\Snake_game.sch
+KiCad Version:,Eeschema (5.1.5)-3

@@ -19,7 +19,7 @@
 // PORTC: data port c
 #define AMOUNT_OF_LEDS 30
 #define AMOUNT_OF_LEDS_HORIZONTAL 5
-#define AMOUNT_OF_LEDS_VERTICAL 6
+#define AMOUNT_OF_LEDS_VERTICAL 6 
 
 #define DIRECTION_UP 0
 #define DIRECTION_RIGHT 1
@@ -27,11 +27,11 @@
 #define DIRECTION_LEFT 3
 
 // Buttons & buzzer pin defines
-#define BUTTON_L 8
-#define BUTTON_D 7
-#define BUTTON_U 6
-#define BUTTON_R 5
-#define BUZZER 9
+#define BUTTON_L 8 
+#define BUTTON_D 7  
+#define BUTTON_U 6 
+#define BUTTON_R 5 
+#define BUZZER 9 
 
 uint8_t tail[AMOUNT_OF_LEDS][2];
 uint8_t direction = DIRECTION_UP;
@@ -80,32 +80,32 @@ uint8_t frameData[AMOUNT_OF_LEDS_VERTICAL] = {
 
 void setup() {
   Serial.begin(19200);
-  pinMode(5, INPUT_PULLUP);
-  pinMode(6, INPUT_PULLUP);
-  pinMode(7, INPUT_PULLUP);
-  pinMode(8, INPUT_PULLUP);
+  pinMode(5,INPUT_PULLUP);
+  pinMode(6,INPUT_PULLUP);
+  pinMode(7,INPUT_PULLUP);
+  pinMode(8,INPUT_PULLUP);
 
-  for (uint8_t i = 0; i < AMOUNT_OF_LEDS; i++) {
+  for(uint8_t i = 0; i < AMOUNT_OF_LEDS; i++){
     tail[i][0] = 0;
     tail[i][1] = 0;
   }
   //tatatadaa welcome
   tone(BUZZER, 250, 80); //pin, freq, duration
   delay (150);
-  tone(BUZZER, 250, 80);
+  tone(BUZZER, 250, 80); 
   delay (150);
-  tone(BUZZER, 250, 80);
+  tone(BUZZER, 250, 80); 
   delay (150);
-  tone(BUZZER, 200, 500);
+  tone(BUZZER, 200, 500); 
 }
 
 void loop() {
-  while (true) {
+  while(true) {
     readInput();
     updateGameLogic();
     updateFrameBuffer();
     drawFrame(8000);
-
+    
   }
 }
 
@@ -113,13 +113,13 @@ void readInput() {
   //Serial.println(PIND, BIN);
   //delay(100);
   //return;
-  if (!digitalRead(BUTTON_U)) {
+  if(!digitalRead(BUTTON_U)) {
     direction = DIRECTION_UP;
-  } else if (!digitalRead(BUTTON_R)) {
+  } else if(!digitalRead(BUTTON_R)) {
     direction = DIRECTION_RIGHT;
-  } else if (!digitalRead(BUTTON_D)) {
+  } else if(!digitalRead(BUTTON_D)) {
     direction = DIRECTION_DOWN;
-  } else if (!digitalRead(BUTTON_L)) {
+  } else if(!digitalRead(BUTTON_L)) {
     direction = DIRECTION_LEFT;
   }
 }
@@ -127,64 +127,64 @@ void readInput() {
 uint8_t tailLength = 2;
 
 void updateGameLogic() {
-  for (uint8_t i = 0; i < tailLength - 1; i++) {
+  for(uint8_t i = 0; i < tailLength - 1; i++) {
     uint8_t target = tailLength - i - 1;
     tail[target][0] = tail[target - 1][0];
     tail[target][1] = tail[target - 1][1];
   }
   tail[0][0] = positionX;
   tail[0][1] = positionY;
-
-  if (direction == DIRECTION_UP) {
+  
+  if(direction == DIRECTION_UP) {
     positionY--;
-  } else if (direction == DIRECTION_RIGHT) {
+  } else if(direction == DIRECTION_RIGHT) {
     positionX++;
-  } else if (direction == DIRECTION_DOWN) {
+  } else if(direction == DIRECTION_DOWN) {
     positionY++;
-  } else if (direction == DIRECTION_LEFT) {
+  } else if(direction == DIRECTION_LEFT) {
     positionX--;
   }
 
-  if (positionX < 0) positionX = AMOUNT_OF_LEDS_HORIZONTAL - 1;
-  if (positionY < 0) positionY = AMOUNT_OF_LEDS_VERTICAL - 1;
+  if(positionX < 0) positionX = AMOUNT_OF_LEDS_HORIZONTAL - 1;
+  if(positionY < 0) positionY = AMOUNT_OF_LEDS_VERTICAL - 1;
 
-  if (positionX >= AMOUNT_OF_LEDS_HORIZONTAL) positionX = 0;
-  if (positionY >= AMOUNT_OF_LEDS_VERTICAL) positionY = 0;
+  if(positionX >= AMOUNT_OF_LEDS_HORIZONTAL) positionX = 0;
+  if(positionY >= AMOUNT_OF_LEDS_VERTICAL) positionY = 0;
 }
 
 void updateFrameBuffer() {
-  for (uint8_t i = 0; i < AMOUNT_OF_LEDS_VERTICAL; i++) {
+  for(uint8_t i = 0; i < AMOUNT_OF_LEDS_VERTICAL; i++) {
     frameData[i] = 0;
   }
 
   frameData[positionY] = 1 << positionX;
 
-  for (uint8_t j = 0; j < tailLength; j++) {
+  for(uint8_t j = 0; j < tailLength; j++) {
     frameData[tail[j][1]] = frameData[tail[j][1]] |  1 << tail[j][0];
   }
-
+  
 }
 
 void drawFrame(uint32_t repeat) {
-  for (uint32_t i = 0; i < repeat; i++) {
-    uint8_t ledNumber = 0;
-    for (uint8_t y = 0; y < AMOUNT_OF_LEDS_VERTICAL; y++) {
+  for(uint32_t i = 0; i < repeat; i++) {
+    uint8_t ledNumber = 0; 
+    for(uint8_t y = 0; y < AMOUNT_OF_LEDS_VERTICAL; y++) {
       uint8_t rowData = frameData[y];
       //Serial.println(rowData, BIN);
-      for (uint8_t x = 0; x < AMOUNT_OF_LEDS_HORIZONTAL; x++) {
+      for(uint8_t x = 0; x < AMOUNT_OF_LEDS_HORIZONTAL; x++) {
         // is on
-
-        if (rowData >> x & 1) {
+        
+        if(rowData >> x & 1) {
           DDRC = matrix[ledNumber][0];
           PORTC = matrix[ledNumber][1];
         } else {
           DDRC = 0;
           PORTC = 0;
         }
-
+        
         ledNumber++;
       }
     }
   }
-
+  
 }
