@@ -1,0 +1,4 @@
+rev 1.0 - First breadboard version | Jacko made software for this version
+rev 2.0 - First PCB version | Adapted GPIO pins
+rev 3.0 - Power supply added
+rev 3.1 - LED's and buttons placed on bottom layer for easy enclosure design
