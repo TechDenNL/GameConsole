@@ -1,0 +1,34 @@
+rev 1.0 - First breadboard version | Jacko made software for this version
+rev 2.0 - First PCB version | GPIO pins modified
+rev 3.0 - Power supply added
+rev 3.1 - LED's and buttons placed on bottom layer for easy enclosure design
+rev 3.2 - N.a.v. Lessons learned session:
+	 - LEDs centreren horizontaal
+	 - Knopjes centreren
+	 - FTDI connector - witmarkering andere zijde
+	 - 78L05 pads uit elkaar plaatsen
+	 - Buzzer pin layout aanpassen - Pinning buzzer is 2.5E
+	 - Potmeter voor geluidvolume
+	 - +/- indicatie bij screen terminals en buzzer
+	 - C5 100u elco ipv 100n
+	 - Vcc selector voorselecteren op 9V
+	 - Charlie ipv Charly
+	 - TechDen GameConsole ipv snakegame
+	 - Stadkamer logo
+	 - universele pinning 22p - zoals bij 100n
+	 - Holes voor MatrixOverlay (ala retro TV game)
+	 - Labels voor URL; URL van TechDen site en repo in de silk
+	 - LED iets laten zakken ivm bezel
+rev 3.3 - URL changed in techdenzwolle.nl
+rev 3.31 - Switched over to KiCad6
+         - Elektor symbol library installed - components converted to Elektor Symbols
+         - Small changes in positioning text on PCB silk
+	 - KiBOM re-installed for KiCad6 & tuned to my needs
+================
+Issues; to resolve in rev 3.4
+- onderste rij LED 1/4E omhoog (0,63mm)
+- R-Trimmer geschikt maken voor RM063 model
+- R-trimmer blokkeert uitnemen van ATMega
+- Screw terminal niet meer nodig door gebruik van 9V connector met plug
+- 100n Caps; Footprint; Wima MKS4 model modified
+
