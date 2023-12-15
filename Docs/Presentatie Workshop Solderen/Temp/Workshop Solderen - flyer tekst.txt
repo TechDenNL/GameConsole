@@ -1,19 +1,19 @@
-Workshop Solderen voor beginners
+Workshop solderen voor beginners.
 
-Zin om iets nieuws te leren?
 Misschien is solderen iets voor jou…
-
-Tijdens de workshop solderen voor beginners ga je allereerst leren om draden te solderen en zul je ondervinden dat hout behoorlijk snel zwart kan worden! 
-Wanneer je wat handigheid met de soldeerbout hebt gekregen, beginnen we met het solderen van een printje. 
-Op dat printje zitten o.a. een chip en diverse knopjes, Leds, weerstandjes, condensatoren, etc.
+Tijdens de cursus solderen voor beginners ga je allereerst leren om draadjes te solderen en zul je uitvinden dat hout behoorlijk snel zwart kan worden! 
+Wanneer je wat handiger bent met de soldeerbout, beginnen we met het solderen met een eigen elektronica kitje. 
+Hierin zitten allerlei knopjes, ledjes, weerstandjes, condensatoren, een chip en natuurlijk een printje waarop alles wordt gesoldeerd. 
 Als dit magisch voor je klinkt dan is deze workshop juist iets voor jou! 
-Het resultaat van de workshop is een eigen mini-spelcomputer die je zelf in elkaar hebt gezet, met een spel naar keuze en die je na afloop mee naar huis kunt nemen.
+Het resultaat van de workshop is een stukje elektronica (mini-spelcomputer) dat je zelf in elkaar hebt gezet en mee naar huis kunt nemen.
 
-Locatie: Stadkamer Centrum
-Leeftijd: vanaf 12 jaar (kinderen onder de 16 onder begeleiding van een volwassene)
-Kosten: 5 euro p.p.
+Deze workshop wordt verzorgd door TechDen.
+De missie van TechDen is gezamenlijk te leren van leuke dingen maken. 
+De focus ligt daarbij op 3D Printen, solderen, Arduino’s en programmeren. 
+TechDen wil dé plek zijn voor iedereen die interesse heeft in de genoemde technieken.
+Daarom heeft TechDen naast deze workshop ook bijeenkomsten in Medialab. 
+Deze vinden eens in de twee weken plaats op woensdagavond van 19.00 - 21.00 uur. Zie hiervoor de agenda van Stadkamer https://stadkamer.op-shop.nl
+Dus mocht je aan het eind van de workshop nog niet helemaal klaar zijn met je kitje, 
+dan kan je het natuurlijk altijd komen afmaken op één van deze woensdagavonden.
 
-Datums:
-31 oktober 2022
-24 november 2022
-26 januari 2023
+Deelname aan de workshop kost 5,- (incl. materialen en koffie/thee)
